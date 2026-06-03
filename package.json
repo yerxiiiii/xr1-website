@@ -1,0 +1,11 @@
+{
+  "name": "xr1-project",
+  "private": true,
+  "description": "XR1 项目根目录 — 官网开发请用下方 scripts（实际运行在 website/）",
+  "scripts": {
+    "dev": "npm run dev --prefix website",
+    "build": "npm run build --prefix website",
+    "preview": "npm run preview --prefix website",
+    "install:website": "npm install --prefix website"
+  }
+}

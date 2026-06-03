@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="XR1 后厨履约机器人 — 轮式双臂一体化，规划驱动执行，为团餐场景降本增效。"
+    />
+    <title>XR1 | Kitchen Robot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/sections.css" />
+  </head>
+  <body>
+    <!-- 1x: 顶栏 NEO / AI / … / ORDER -->
+    <header class="nav" role="banner">
+      <div class="nav__inner">
+        <a href="#" class="nav__logo">XR1</a>
+        <nav aria-label="页面导航">
+          <ul class="nav__links">
+            <li><a href="#product" data-nav="product">产品</a></li>
+            <li><a href="#solution" data-nav="solution">方案</a></li>
+            <li><a href="#design" data-nav="design">设计</a></li>
+            <li><a href="#tech" data-nav="tech">技术</a></li>
+            <li><a href="#stories" data-nav="stories">案例</a></li>
+            <li><a href="#factory" data-nav="factory">产线</a></li>
+            <li><a href="#specs" data-nav="specs">参数</a></li>
+          </ul>
+        </nav>
+        <div class="nav__actions">
+          <a href="#contact" class="nav__order" data-nav="contact">商务洽谈</a>
+          <button type="button" class="nav__menu-btn" aria-label="菜单" aria-expanded="false">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!--
+      图片替换总说明 → website/docs/图片替换指南.md
+      素材目录 → website/public/images/
+      本文件每个 [图-xx] 注释对应该换的一处底图/配图
+    -->
+    <main>
+      <!-- [图-01] 首屏主视觉 | 导航「产品」| 视频: public/video/hero.mp4 | 左右+底部渐隐见 .hero-1x__video -->
+      <section class="hero-1x" id="product" data-scrollspy="product" aria-labelledby="hero-label">
+        <div class="hero-1x__label reveal" id="hero-label">
+          <span class="hero-1x__name">XR1</span>
+          <span class="hero-1x__subtitle">Kitchen Robot</span>
+        </div>
+        <div class="hero-1x__visual reveal">
+          <!-- 源: 视频/17772587791866454_20260514_222445_Seedance_2.0.mp4 | 文件: public/video/hero.mp4 -->
+          <video
+            class="hero-1x__video"
+            src="/video/hero.mp4"
+            poster="/images/hero.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-label="XR1 在后厨环境中工作"
+          ></video>
+        </div>
+        <div class="hero-1x__cta-block reveal">
+          <span class="hero-1x__deposit">单店产能 500+ 份/日</span>
+          <a href="#contact" class="btn-primary">预约体验</a>
+        </div>
+      </section>
+
+      <!-- [图-02] 背景变小尺寸 | 导航「方案」| 文件: public/images/solution-bg.jpg -->
+      <section class="immersive" id="solution" data-scrollspy="solution" aria-labelledby="immersive-title">
+        <div class="immersive__media" style="position: relative; display: flex; justify-content: center; align-items: center;">
+          <!-- 源: solution-bg.jpg（双机后厨 · CHAO餐厅）→ public/images/solution-bg.jpg -->
+          <div style="
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 60vh;
+            overflow: visible;
+          ">
+            <!-- 渐影遮罩，近影距离加大 -->
+            <div style="
+              position: absolute;
+              inset: 0;
+              z-index: 1;
+              pointer-events: none;
+              background: radial-gradient(
+                ellipse 60% 45% at 50% 54%,
+                rgba(255,255,255,0) 60%,
+                rgba(250,250,252,0.85) 100%
+              );
+              transition: background .3s;
+            "></div>
+            <img
+              class="site-media site-media--fullscreen"
+              src="/images/solution-bg.jpg"
+              alt="XR1 双机后厨协同 · CHAO餐厅"
+              loading="lazy"
+              decoding="async"
+              style="
+                position: relative;
+                z-index: 2;
+                display: block;
+                margin: 0 auto;
+                max-width: 65vw;
+                max-height: 48vh;
+                width: auto;
+                height: auto;
+                box-shadow: 0 12px 64px 0 rgba(36,43,60,0.08);
+                border-radius: 1.8rem;
+                background: transparent;
+              "
+            />
+          </div>
+        </div>
+        <div class="immersive__content reveal">
+          <h2 class="immersive__title" id="immersive-title">规划驱动执行</h2>
+          <p class="immersive__body">
+            XR1 默认接入 DCS 调度：订单拆解、工位分工与动线工序在规划层可见，再驱动物理取料、递盘与容器周转。忙时支持冲突重规划。
+          </p>
+        </div>
+      </section>
+
+      <!-- [图-03] 机身设计特写 | 导航「设计」| 文件: public/images/design.jpg -->
+      <section class="focus-product reveal" id="design" data-scrollspy="design" aria-label="产品设计">
+        <!-- 源: 素材/场景_后厨夹爪端盘特写.jpg -->
+        <img
+          class="site-media site-media--hero"
+          src="/images/design.jpg"
+          alt="XR1 后厨夹爪端盘特写"
+          loading="lazy"
+          decoding="async"
+        />
+        <p style="margin-top: 2rem; color: var(--color-text-muted); max-width: 28rem; margin-inline: auto">
+          白色/淡蓝色质感机身，融入现代商用后厨，兼顾亲和力与IP43防护。
+        </p>
+      </section>
+
+      <!-- [图-04~07] 技术轮播四张 | 导航「技术」| 文件: tech-arm.jpg / tech-560.jpg / tech-gripper.jpg / tech-sensors.jpg -->
+      <section class="carousel-section" id="tech" data-scrollspy="tech" aria-labelledby="carousel-title">
+        <div class="carousel-section__header reveal">
+          <h2 class="carousel-section__title" id="carousel-title">核心硬件</h2>
+          <p class="carousel-section__desc">双臂、夹爪与感知系统。</p>
+        </div>
+        <div class="carousel reveal" data-carousel>
+          <article class="carousel__item">
+            <!-- [图-04] 源: 素材/夹爪_0.15秒开合微距.png -->
+            <img class="site-media site-media--card" src="/images/tech-arm.png" alt="仿生机械臂" loading="lazy" />
+            <span class="carousel__label">19 DOF · ±0.5mm</span>
+          </article>
+          <article class="carousel__item">
+            <!-- [图-05] 源: 素材/560mm窄机身_未来走廊全身.png -->
+            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="XR1 整机通道尺度" loading="lazy" />
+            <span class="carousel__label">窄通道通行</span>
+          </article>
+          <article class="carousel__item">
+            <!-- [图-06] 源: brochure/夹爪开合.jpg -->
+            <img class="site-media site-media--card" src="/images/tech-gripper.jpg" alt="150N 自锁夹爪" loading="lazy" />
+            <span class="carousel__label">0.15s 开合</span>
+          </article>
+          <article class="carousel__item">
+            <!-- [图-07] 源: 素材/5GWiFi_商场双网全息信号.png -->
+            <img class="site-media site-media--card" src="/images/tech-sensors.png" alt="5G 与多维感知" loading="lazy" />
+            <span class="carousel__label">ZED · 激光 · 超声</span>
+          </article>
+        </div>
+        <div class="carousel__dots" data-carousel-dots aria-hidden="true">
+          <button type="button" class="carousel__dot is-active" aria-label="第 1 张"></button>
+          <button type="button" class="carousel__dot" aria-label="第 2 张"></button>
+          <button type="button" class="carousel__dot" aria-label="第 3 张"></button>
+          <button type="button" class="carousel__dot" aria-label="第 4 张"></button>
+        </div>
+      </section>
+
+      <!-- [图-08] 案例左图 · 算力 | 导航「案例」| public/images/story-tops.png ← 素材/1150Tops_机房数据流半身.png -->
+      <section class="story" id="stories" data-scrollspy="stories">
+        <div class="container">
+          <div class="story__grid reveal">
+            <div class="story__media-wrap">
+              <!-- 源: 素材/1150Tops_机房数据流半身.png -->
+              <img class="site-media site-media--story" src="/images/story-tops.png" alt="XR1 1150 Tops 边缘算力" loading="lazy" />
+            </div>
+            <div>
+              <div class="story__badge">
+                <span>边缘算力</span>
+                <time datetime="2026">2026</time>
+              </div>
+              <h2 class="story__title">后厨认知中枢</h2>
+              <p class="story__body">
+                1150 Tops 边缘算力配合 RK3576，本地运行多模态决策；5G / Wi-Fi 5 双网保障调度指令低延迟下发。
+              </p>
+              <div class="story__actions">
+                <a href="#specs" class="btn-ghost">查看参数</a>
+                <a href="#contact" class="btn-primary">商务洽谈</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- [图-09] 案例左图 · 感知 | public/images/story-sensors.jpg ← 素材/底盘感知.jpeg -->
+      <section class="story story--reverse" data-scrollspy="stories">
+        <div class="container">
+          <div class="story__grid reveal">
+            <div class="story__media-wrap">
+              <!-- 源: 素材/底盘感知.jpeg -->
+              <img class="site-media site-media--story" src="/images/story-sensors.jpg" alt="XR1 底盘感知系统" loading="lazy" />
+              
+            </div>
+            <div>
+              <div class="story__badge">
+                <span>安全感知</span>
+                <time datetime="2026">2026</time>
+              </div>
+              <h2 class="story__title">360° 毫米级环境理解</h2>
+              <p class="story__body">
+                视觉、双激光雷达与超声波融合，狭窄后厨中平滑避障；0.6m/s 下制动距离 ≤0.3m，保障人员与设备安全。
+              </p>
+              <div class="story__actions">
+                <a href="#specs" class="btn-ghost">技术参数</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- [图-10 已移除] 产线区视频 — 见 docs/图片替换指南.md 若需恢复 -->
+      <section class="section-centered" id="factory" data-scrollspy="factory">
+        <div class="reveal">
+          <h2 class="section-centered__title">降本增效，可量化</h2>
+          <p class="section-centered__subtitle">
+            导入 XR1 整体方案后，单店人工成本可节省 62%–76%，ROI 周期具备竞争力。
+          </p>
+          <a href="#contact" class="btn-primary">获取测算报告</a>
+        </div>
+        <div class="testimonial-grid reveal" style="margin-top: 4rem">
+          <blockquote class="testimonial-card">
+            <p class="testimonial-card__quote">「规划层能看见每一单工序，执行层不再靠人盯。」</p>
+            <footer class="testimonial-card__author">
+              <strong>团餐运营负责人</strong>
+              <span>场景调研 · 占位</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p class="testimonial-card__quote">「双臂周转容器，和自动炒锅流水线真正接上了。」</p>
+            <footer class="testimonial-card__author">
+              <strong>连锁餐饮 CTO</strong>
+              <span>客户反馈 · 占位</span>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p class="testimonial-card__quote">「窄机身进得了我们后厨过道，部署比预期快。」</p>
+            <footer class="testimonial-card__author">
+              <strong>食堂项目经理</strong>
+              <span>试点总结 · 占位</span>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- [视频-11] 落地场景实拍 | public/video/scenario-promo.mp4 ← 实拍/调色后宣传片素材-1.mp4 -->
+      <section class="factory-block" data-scrollspy="factory">
+        <div class="reveal">
+          <h2 class="section-centered__title">落地场景</h2>
+          <p class="section-centered__subtitle" style="font-size: 1.05rem; font-weight: 400">
+            企业团餐 · 学校食堂 · 医院食堂 · 连锁中餐厅 — 封闭打餐 / 出餐流水线。
+          </p>
+        </div>
+        <div class="factory-block__diagram reveal">
+          <video
+            class="site-media site-media--diagram"
+            src="/video/scenario-promo.mp4"
+            poster="/images/factory-diagram.jpg"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="XR1 团餐后厨落地场景实拍"
+          ></video>
+          
+        </div>
+      </section>
+
+      <!-- 参数区无大图；可选爆炸图 public/images/exploded.jpg — 见 docs/图片替换指南.md 图-12 -->
+      <section class="spec-list-section" id="specs" data-scrollspy="specs" aria-labelledby="specs-heading">
+        <h2 id="specs-heading" class="visually-hidden">技术参数</h2>
+        <div class="spec-list__layout">
+          <ul class="spec-list__sidebar" data-spec-sidebar>
+            <li><a href="#specs" data-spec-nav="all">全部</a></li>
+            <li><a href="#spec-body" data-spec-nav="body">机身</a></li>
+            <li><a href="#spec-arm" data-spec-nav="arm">手臂</a></li>
+            <li><a href="#spec-chassis" data-spec-nav="chassis">底盘</a></li>
+            <li><a href="#spec-network" data-spec-nav="network">网络</a></li>
+          </ul>
+          <div>
+            <p class="spec-group__label" id="spec-body" data-spec-group="body">机身</p>
+            <div class="spec-row">
+              <span class="spec-row__name">整机尺寸</span>
+              <span class="spec-row__value">高 1400mm / 直径 560mm / 净重 90±5kg</span>
+            </div>
+            <p class="spec-group__label" id="spec-arm" data-spec-group="arm">手臂与夹爪</p>
+            <div class="spec-row">
+              <span class="spec-row__name">自由度</span>
+              <span class="spec-row__value">19 DOF · 单臂负载 4.5kg · 臂展 615mm</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-row__name">夹爪</span>
+              <span class="spec-row__value">150N · 行程 50mm · 0.15s 开合自锁</span>
+            </div>
+            <p class="spec-group__label" id="spec-chassis" data-spec-group="chassis">底盘与续航</p>
+            <div class="spec-row">
+              <span class="spec-row__name">运动性能</span>
+              <span class="spec-row__value">移速 1.2m/s · 爬坡 8° · 续航 8h</span>
+            </div>
+            <p class="spec-group__label" id="spec-network" data-spec-group="network">计算与网络</p>
+            <div class="spec-row">
+              <span class="spec-row__name">算力与连接</span>
+              <span class="spec-row__value">1150 Tops · RK3576 · 5G RedCap / Wi-Fi 5</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- [图-13 可选] 微信二维码 public/images/wechat-qr.png | 导航「商务洽谈」 -->
+      <section class="experience" id="contact" data-scrollspy="contact" aria-labelledby="experience-title">
+        <p class="section-label" style="letter-spacing: var(--letter-nav); text-transform: uppercase; font-size: 0.65rem; color: var(--color-text-faint); margin-bottom: 1rem">Experience</p>
+        <h2 class="experience__title" id="experience-title">体验</h2>
+        <p class="experience__subtitle">XR1</p>
+        <form class="notify-form" action="#" method="post" onsubmit="return false">
+          <input type="email" name="email" placeholder="工作邮箱" aria-label="工作邮箱" required />
+          <button type="submit" class="btn-primary">获取方案资料</button>
+        </form>
+        <p class="experience__fine">订阅产品更新。可随时取消。商务请联系 business@xr1.robot</p>
+      </section>
+    </main>
+
+    <!-- ui/3.png Footer -->
+    <footer class="footer-1x">
+      <div class="footer-1x__grid">
+        <div>
+          <div class="footer-1x__brand">XR1</div>
+          <p class="footer-1x__copy">XR1 © 2026 · Embodied AI for B2B Kitchens</p>
+        </div>
+        <ul class="footer-1x__col">
+          <li><a href="#product">产品</a></li>
+          <li><a href="#solution">方案</a></li>
+          <li><a href="#tech">技术</a></li>
+          <li><a href="#specs">参数</a></li>
+          <li><a href="#contact">商务</a></li>
+        </ul>
+        <ul class="footer-1x__col">
+          <li><a href="#">领英</a></li>
+          <li><a href="#">视频号</a></li>
+          <li><a href="#">微信公众号</a></li>
+        </ul>
+        <ul class="footer-1x__col">
+          <li><a href="#">使用条款</a></li>
+          <li><a href="#">隐私政策</a></li>
+          <li><a href="#">媒体联系</a></li>
+          <li><a href="#">支持</a></li>
+        </ul>
+        <ul class="footer-1x__col">
+          <li><a href="#contact">获取更新</a></li>
+          <li><a href="#contact">投资者关系</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    </style>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+**/node_modules/
+website/dist/
+
+# 本地原始素材（体积大；官网已用 website/public/ 内压缩版）
+素材/
+视频/
+实拍/
+brochure/
+ui/
+参数/
+未命名文件夹/
+*.zip
+
+# 未纳入官网交付的 Markdown / 脚本（保留在本地）
+XR1_AIGC*.md
+XR1_产品手册*.md
+XR1_机身*.md
+XR1_视觉*.md
+餐厅视频脚本*.md
+餐厅视频脚本*.xlsx
+餐厅场景分析及拆解.pdf
+米黄机器人产品规格书.pdf
+scripts/
+xr1_02.png
