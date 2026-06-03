@@ -1,31 +1,31 @@
 :root {
-  --color-bg: #f7f7f7;
-  --color-bg-pure: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #6b6b6b;
-  --color-text-faint: #9a9a9a;
-  --color-border: rgba(26, 26, 26, 0.12);
-  --color-btn: #1a1a1a;
-  --color-btn-text: #ffffff;
-  --color-pill-bg: rgba(26, 26, 26, 0.06);
-  --color-overlay: rgba(0, 0, 0, 0.45);
+  --color-bg: #f5f6f7;
+  --color-bg-pure: #fafbfc;
+  --color-text: #181b1f;
+  --color-text-muted: #5c6369;
+  --color-text-faint: #8a9199;
+  --color-border: rgba(24, 27, 31, 0.1);
+  --color-btn: #181b1f;
+  --color-btn-text: #fafbfc;
+  --color-pill-bg: rgba(24, 27, 31, 0.05);
+  --color-overlay: rgba(12, 14, 18, 0.48);
 
-  /* 首屏深色（参考 ui/1.png 1x 首页） */
-  --color-hero-bg: #0a0a0a;
-  --color-hero-text: #f5f5f7;
-  --color-hero-text-muted: #a1a1aa;
-  --color-hero-btn-bg: #f5f5f7;
-  --color-hero-btn-text: #0a0a0a;
+  /* 首屏深色 */
+  --color-hero-bg: #0c0e12;
+  --color-hero-text: #f2f3f5;
+  --color-hero-text-muted: #9ca3ab;
+  --color-hero-btn-bg: #f2f3f5;
+  --color-hero-btn-text: #0c0e12;
 
-  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-sans: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', system-ui, sans-serif;
 
   --nav-height: 56px;
   --container: min(1280px, calc(100% - 3rem));
-  --radius-media: 2rem;
+  --radius-media: 1.25rem;
   --radius-pill: 999px;
-  --letter-nav: 0.12em;
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --transition: 0.4s var(--ease-out);
+  --letter-nav: 0.06em;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition: 0.35s var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {

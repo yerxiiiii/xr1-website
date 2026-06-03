@@ -133,27 +133,24 @@ function initCarouselDots() {
 
   const items = carousel.querySelectorAll('.carousel__item');
 
+  function syncCarouselState() {
+    const center = carousel.scrollLeft + carousel.clientWidth / 2;
+    let active = 0;
+    items.forEach((item, i) => {
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      if (Math.abs(itemCenter - center) < item.offsetWidth / 2) active = i;
+    });
+    dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
+  }
+
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-      dots.forEach((d) => d.classList.remove('is-active'));
-      dot.classList.add('is-active');
       items[i]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
     });
   });
 
-  carousel.addEventListener(
-    'scroll',
-    () => {
-      const center = carousel.scrollLeft + carousel.clientWidth / 2;
-      let active = 0;
-      items.forEach((item, i) => {
-        const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-        if (Math.abs(itemCenter - center) < item.offsetWidth / 2) active = i;
-      });
-      dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
-    },
-    { passive: true }
-  );
+  carousel.addEventListener('scroll', syncCarouselState, { passive: true });
+  syncCarouselState();
 }
 
 function initSmoothAnchors() {

@@ -86,10 +86,11 @@ button {
 }
 
 .site-media--hero {
-  min-height: clamp(320px, 55vh, 640px);
+  min-height: clamp(380px, 58vh, 680px);
   border-radius: var(--radius-media);
-  mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
 }
 
 .site-media--fullscreen {
@@ -97,44 +98,39 @@ button {
   inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 85vh;
+  min-height: 100vh;
   border-radius: 0;
+  object-fit: cover;
 }
 
 .site-media--card {
-  aspect-ratio: 4 / 5;
-  min-height: 280px;
+  aspect-ratio: 1 / 1;
+  min-height: clamp(300px, 42vw, 440px);
+  width: 100%;
   border-radius: var(--radius-media);
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* 第 4 张：机器人本体偏右，裁切锚点右移使主体居中 */
+.site-media--card-sensors {
+  object-position: 62% center;
 }
 
 .site-media--story {
-  aspect-ratio: 16 / 10;
-  min-height: 360px;
+  aspect-ratio: 16 / 11;
+  min-height: clamp(280px, 32vw, 420px);
   border-radius: var(--radius-media);
+  object-fit: cover;
 }
 
 .site-media--diagram {
   min-height: 420px;
   border-radius: var(--radius-media);
+  object-fit: cover;
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity var(--transition),
-    transform var(--transition);
-}
-
-.reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+  transform: none;
 }

@@ -8,12 +8,6 @@
       content="XR1 后厨履约机器人 — 轮式双臂一体化，规划驱动执行，为团餐场景降本增效。"
     />
     <title>XR1 | Kitchen Robot</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <link rel="stylesheet" href="/src/styles/sections.css" />
@@ -27,7 +21,6 @@
           <ul class="nav__links">
             <li><a href="#product" data-nav="product">产品</a></li>
             <li><a href="#solution" data-nav="solution">方案</a></li>
-            <li><a href="#design" data-nav="design">设计</a></li>
             <li><a href="#tech" data-nav="tech">技术</a></li>
             <li><a href="#stories" data-nav="stories">案例</a></li>
             <li><a href="#factory" data-nav="factory">产线</a></li>
@@ -73,53 +66,17 @@
         </div>
       </section>
 
-      <!-- [图-02] 背景变小尺寸 | 导航「方案」| 文件: public/images/solution-bg.jpg -->
+      <!-- [图-02] 全屏沉浸场景 | 导航「方案」| 文件: public/images/solution-bg.jpg -->
       <section class="immersive" id="solution" data-scrollspy="solution" aria-labelledby="immersive-title">
-        <div class="immersive__media" style="position: relative; display: flex; justify-content: center; align-items: center;">
+        <div class="immersive__media">
           <!-- 源: solution-bg.jpg（双机后厨 · CHAO餐厅）→ public/images/solution-bg.jpg -->
-          <div style="
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 60vh;
-            overflow: visible;
-          ">
-            <!-- 渐影遮罩，近影距离加大 -->
-            <div style="
-              position: absolute;
-              inset: 0;
-              z-index: 1;
-              pointer-events: none;
-              background: radial-gradient(
-                ellipse 60% 45% at 50% 54%,
-                rgba(255,255,255,0) 60%,
-                rgba(250,250,252,0.85) 100%
-              );
-              transition: background .3s;
-            "></div>
-            <img
-              class="site-media site-media--fullscreen"
-              src="/images/solution-bg.jpg"
-              alt="XR1 双机后厨协同 · CHAO餐厅"
-              loading="lazy"
-              decoding="async"
-              style="
-                position: relative;
-                z-index: 2;
-                display: block;
-                margin: 0 auto;
-                max-width: 65vw;
-                max-height: 48vh;
-                width: auto;
-                height: auto;
-                box-shadow: 0 12px 64px 0 rgba(36,43,60,0.08);
-                border-radius: 1.8rem;
-                background: transparent;
-              "
-            />
-          </div>
+          <img
+            class="site-media site-media--fullscreen"
+            src="/images/solution-bg.jpg"
+            alt="XR1 双机后厨协同 · CHAO餐厅"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <div class="immersive__content reveal">
           <h2 class="immersive__title" id="immersive-title">规划驱动执行</h2>
@@ -129,22 +86,7 @@
         </div>
       </section>
 
-      <!-- [图-03] 机身设计特写 | 导航「设计」| 文件: public/images/design.jpg -->
-      <section class="focus-product reveal" id="design" data-scrollspy="design" aria-label="产品设计">
-        <!-- 源: 素材/场景_后厨夹爪端盘特写.jpg -->
-        <img
-          class="site-media site-media--hero"
-          src="/images/design.jpg"
-          alt="XR1 后厨夹爪端盘特写"
-          loading="lazy"
-          decoding="async"
-        />
-        <p style="margin-top: 2rem; color: var(--color-text-muted); max-width: 28rem; margin-inline: auto">
-          白色/淡蓝色质感机身，融入现代商用后厨，兼顾亲和力与IP43防护。
-        </p>
-      </section>
-
-      <!-- [图-04~07] 技术轮播四张 | 导航「技术」| 文件: tech-arm.jpg / tech-560.jpg / tech-gripper.jpg / tech-sensors.jpg -->
+      <!-- [图-04~07] 技术轮播四张 | 导航「技术」| 文件: tech-dof.mp4 / tech-560.jpg / tech-gripper.mp4 / tech-sensors.png -->
       <section class="carousel-section" id="tech" data-scrollspy="tech" aria-labelledby="carousel-title">
         <div class="carousel-section__header reveal">
           <h2 class="carousel-section__title" id="carousel-title">核心硬件</h2>
@@ -152,23 +94,41 @@
         </div>
         <div class="carousel reveal" data-carousel>
           <article class="carousel__item">
-            <!-- [图-04] 源: 素材/夹爪_0.15秒开合微距.png -->
-            <img class="site-media site-media--card" src="/images/tech-arm.png" alt="仿生机械臂" loading="lazy" />
-            <span class="carousel__label">19 DOF · ±0.5mm</span>
+            <!-- [图-04] 源: 素材/17772587791866454_20260512_102531_Seedance_2.0.mp4 → public/video/tech-dof.mp4 -->
+            <video
+              class="site-media site-media--card"
+              src="/video/tech-dof.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="XR1 整机自由度"
+            ></video>
+            <span class="carousel__label">19 DOF · 整机自由度</span>
           </article>
           <article class="carousel__item">
-            <!-- [图-05] 源: 素材/560mm窄机身_未来走廊全身.png -->
-            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="XR1 整机通道尺度" loading="lazy" />
+            <!-- [图-05] 源: 素材/封面_后厨俯拍导航路径.jpg → public/images/tech-560.jpg -->
+            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="XR1 后厨俯拍导航路径" loading="lazy" />
             <span class="carousel__label">窄通道通行</span>
           </article>
           <article class="carousel__item">
-            <!-- [图-06] 源: brochure/夹爪开合.jpg -->
-            <img class="site-media site-media--card" src="/images/tech-gripper.jpg" alt="150N 自锁夹爪" loading="lazy" />
+            <!-- [图-06] 源: 视频/17772587791866454_20260515_001356_Kling_3.0.mp4 → public/video/tech-gripper.mp4 -->
+            <video
+              class="site-media site-media--card"
+              src="/video/tech-gripper.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="150N 自锁夹爪 0.15s 开合"
+            ></video>
             <span class="carousel__label">0.15s 开合</span>
           </article>
           <article class="carousel__item">
             <!-- [图-07] 源: 素材/5GWiFi_商场双网全息信号.png -->
-            <img class="site-media site-media--card" src="/images/tech-sensors.png" alt="5G 与多维感知" loading="lazy" />
+            <img class="site-media site-media--card site-media--card-sensors" src="/images/tech-sensors.png" alt="5G 与多维感知" loading="lazy" />
             <span class="carousel__label">ZED · 激光 · 超声</span>
           </article>
         </div>
@@ -180,34 +140,38 @@
         </div>
       </section>
 
-      <!-- [图-08] 案例左图 · 算力 | 导航「案例」| public/images/story-tops.png ← 素材/1150Tops_机房数据流半身.png -->
-      <section class="story" id="stories" data-scrollspy="stories">
-        <div class="container">
-          <div class="story__grid reveal">
-            <div class="story__media-wrap">
-              <!-- 源: 素材/1150Tops_机房数据流半身.png -->
-              <img class="site-media site-media--story" src="/images/story-tops.png" alt="XR1 1150 Tops 边缘算力" loading="lazy" />
+      <!-- [图-08] 案例 · 算力 | 导航「案例」| public/images/story-tops.png ← 素材/1150Tops_机房数据流半身.png -->
+      <section class="story story--bg" id="stories" data-scrollspy="stories">
+        <div class="story-bg__media">
+          <!-- 源: 素材/1150Tops_机房数据流半身.png -->
+          <img
+            class="site-media site-media--story-bg"
+            src="/images/story-tops.png"
+            alt="XR1 1150 Tops 边缘算力"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="story-bg__content reveal">
+          <div class="story-bg__inner">
+            <div class="story__badge">
+              <span>边缘算力</span>
+              <time datetime="2026">2026</time>
             </div>
-            <div>
-              <div class="story__badge">
-                <span>边缘算力</span>
-                <time datetime="2026">2026</time>
-              </div>
-              <h2 class="story__title">后厨认知中枢</h2>
-              <p class="story__body">
-                1150 Tops 边缘算力配合 RK3576，本地运行多模态决策；5G / Wi-Fi 5 双网保障调度指令低延迟下发。
-              </p>
-              <div class="story__actions">
-                <a href="#specs" class="btn-ghost">查看参数</a>
-                <a href="#contact" class="btn-primary">商务洽谈</a>
-              </div>
+            <h2 class="story__title">后厨认知中枢</h2>
+            <p class="story__body">
+              1150 Tops 边缘算力配合 RK3576，本地运行多模态决策；5G / Wi-Fi 5 双网保障调度指令低延迟下发。
+            </p>
+            <div class="story__actions">
+              <a href="#specs" class="btn-ghost">查看参数</a>
+              <a href="#contact" class="btn-primary">商务洽谈</a>
             </div>
           </div>
         </div>
       </section>
 
       <!-- [图-09] 案例左图 · 感知 | public/images/story-sensors.jpg ← 素材/底盘感知.jpeg -->
-      <section class="story story--reverse" data-scrollspy="stories">
+      <section class="story" data-scrollspy="stories">
         <div class="container">
           <div class="story__grid reveal">
             <div class="story__media-wrap">
@@ -241,26 +205,26 @@
           </p>
           <a href="#contact" class="btn-primary">获取测算报告</a>
         </div>
-        <div class="testimonial-grid reveal" style="margin-top: 4rem">
+        <div class="testimonial-grid reveal">
           <blockquote class="testimonial-card">
             <p class="testimonial-card__quote">「规划层能看见每一单工序，执行层不再靠人盯。」</p>
             <footer class="testimonial-card__author">
               <strong>团餐运营负责人</strong>
-              <span>场景调研 · 占位</span>
+              <span>场景调研</span>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card">
             <p class="testimonial-card__quote">「双臂周转容器，和自动炒锅流水线真正接上了。」</p>
             <footer class="testimonial-card__author">
               <strong>连锁餐饮 CTO</strong>
-              <span>客户反馈 · 占位</span>
+              <span>客户反馈</span>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card">
             <p class="testimonial-card__quote">「窄机身进得了我们后厨过道，部署比预期快。」</p>
             <footer class="testimonial-card__author">
               <strong>食堂项目经理</strong>
-              <span>试点总结 · 占位</span>
+              <span>试点总结</span>
             </footer>
           </blockquote>
         </div>
@@ -270,8 +234,8 @@
       <section class="factory-block" data-scrollspy="factory">
         <div class="reveal">
           <h2 class="section-centered__title">落地场景</h2>
-          <p class="section-centered__subtitle" style="font-size: 1.05rem; font-weight: 400">
-            企业团餐 · 学校食堂 · 医院食堂 · 连锁中餐厅 — 封闭打餐 / 出餐流水线。
+          <p class="section-centered__subtitle factory-block__subtitle">
+            企业团餐 · 学校食堂 · 医院食堂 · 连锁中餐厅，封闭打餐与出餐流水线。
           </p>
         </div>
         <div class="factory-block__diagram reveal">
@@ -332,9 +296,8 @@
 
       <!-- [图-13 可选] 微信二维码 public/images/wechat-qr.png | 导航「商务洽谈」 -->
       <section class="experience" id="contact" data-scrollspy="contact" aria-labelledby="experience-title">
-        <p class="section-label" style="letter-spacing: var(--letter-nav); text-transform: uppercase; font-size: 0.65rem; color: var(--color-text-faint); margin-bottom: 1rem">Experience</p>
-        <h2 class="experience__title" id="experience-title">体验</h2>
-        <p class="experience__subtitle">XR1</p>
+        <h2 class="experience__title" id="experience-title">获取方案资料</h2>
+        <p class="experience__lead">留下工作邮箱，我们会发送 XR1 产品手册与 ROI 测算模板。</p>
         <form class="notify-form" action="#" method="post" onsubmit="return false">
           <input type="email" name="email" placeholder="工作邮箱" aria-label="工作邮箱" required />
           <button type="submit" class="btn-primary">获取方案资料</button>
@@ -348,7 +311,7 @@
       <div class="footer-1x__grid">
         <div>
           <div class="footer-1x__brand">XR1</div>
-          <p class="footer-1x__copy">XR1 © 2026 · Embodied AI for B2B Kitchens</p>
+          <p class="footer-1x__copy">XR1 © 2026 · 后厨履约机器人</p>
         </div>
         <ul class="footer-1x__col">
           <li><a href="#product">产品</a></li>
