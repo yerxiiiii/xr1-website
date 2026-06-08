@@ -107,7 +107,7 @@ button {
   aspect-ratio: 1 / 1;
   min-height: clamp(300px, 42vw, 440px);
   width: 100%;
-  border-radius: var(--radius-media);
+  border-radius: 0;
   object-fit: cover;
   object-position: center center;
 }

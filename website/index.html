@@ -5,31 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="XR1 后厨履约机器人 — 轮式双臂一体化，规划驱动执行，为团餐场景降本增效。"
+      content="量化派官网 — 面向真实空间的智能硬件产品，包括机器人 XR1、台灯 Lumen 与耳机 Morpho。"
     />
-    <title>XR1 | Kitchen Robot</title>
+    <title>量化派 | QuantGroup</title>
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <link rel="stylesheet" href="/src/styles/sections.css" />
   </head>
   <body>
-    <!-- 1x: 顶栏 NEO / AI / … / ORDER -->
     <header class="nav" role="banner">
       <div class="nav__inner">
-        <a href="#" class="nav__logo">XR1</a>
+        <a href="#product" class="nav__logo" aria-label="量化派首页">
+          <img
+            class="nav__logo-img"
+            src="/images/quantpai-logo.png?v=4"
+            alt="量化派 Quant Group"
+            width="158"
+            height="80"
+            decoding="async"
+          />
+        </a>
         <nav aria-label="页面导航">
           <ul class="nav__links">
-            <li><a href="#product" data-nav="product">产品</a></li>
-            <li><a href="#solution" data-nav="solution">方案</a></li>
-            <li><a href="#tech" data-nav="tech">技术</a></li>
-            <li><a href="#stories" data-nav="stories">案例</a></li>
-            <li><a href="#factory" data-nav="factory">产线</a></li>
-            <li><a href="#specs" data-nav="specs">参数</a></li>
+            <li><a href="#product" data-nav="product">首页</a></li>
+            <li><a href="#specs" data-nav="specs">XR1<span class="nav__chevron" aria-hidden="true"></span></a></li>
+            <li><a href="#products" data-nav="products">Lumen<span class="nav__chevron" aria-hidden="true"></span></a></li>
+            <li><a href="#products" data-nav="products">Morpho<span class="nav__chevron" aria-hidden="true"></span></a></li>
+            <li><a href="#tech" data-nav="tech">技术<span class="nav__chevron" aria-hidden="true"></span></a></li>
+            <li><a href="#stories" data-nav="stories">场景<span class="nav__chevron" aria-hidden="true"></span></a></li>
+            <li><a href="#contact">文档</a></li>
+            <li><a href="#about" data-nav="about">关于量化派<span class="nav__chevron" aria-hidden="true"></span></a></li>
           </ul>
         </nav>
         <div class="nav__actions">
-          <a href="#contact" class="nav__order" data-nav="contact">商务洽谈</a>
-          <button type="button" class="nav__menu-btn" aria-label="菜单" aria-expanded="false">☰</button>
+          <a href="#" class="nav__lang" aria-label="切换语言">中/EN</a>
+          <button type="button" class="nav__search" aria-label="搜索"></button>
+          <a href="#contact" class="nav__order" data-nav="contact">
+            <span class="nav__order-icon" aria-hidden="true"></span>
+            联系我们
+          </a>
+          <button type="button" class="nav__menu-btn" aria-label="菜单" aria-expanded="false">
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
@@ -40,11 +58,11 @@
       本文件每个 [图-xx] 注释对应该换的一处底图/配图
     -->
     <main>
-      <!-- [图-01] 首屏主视觉 | 导航「产品」| 视频: public/video/hero.mp4 | 左右+底部渐隐见 .hero-1x__video -->
+      <!-- [图-01] 首屏主视觉 | 视频: public/video/hero.mp4 | 左右+底部渐隐见 .hero-1x__video -->
       <section class="hero-1x" id="product" data-scrollspy="product" aria-labelledby="hero-label">
         <div class="hero-1x__label reveal" id="hero-label">
-          <span class="hero-1x__name">XR1</span>
-          <span class="hero-1x__subtitle">Kitchen Robot</span>
+          <span class="hero-1x__name">New Era</span>
+          <span class="hero-1x__subtitle">把顶会技术落地到所有人身边</span>
         </div>
         <div class="hero-1x__visual reveal">
           <!-- 源: 视频/17772587791866454_20260514_222445_Seedance_2.0.mp4 | 文件: public/video/hero.mp4 -->
@@ -57,79 +75,74 @@
             loop
             playsinline
             preload="auto"
-            aria-label="XR1 在后厨环境中工作"
+            aria-label="量化派智能硬件产品场景"
           ></video>
         </div>
         <div class="hero-1x__cta-block reveal">
-          <span class="hero-1x__deposit">单店产能 500+ 份/日</span>
-          <a href="#contact" class="btn-primary">预约体验</a>
+          <span class="hero-1x__deposit">机器人、光与声音的下一代空间入口</span>
+          <a href="#products" class="btn-primary">查看产品</a>
         </div>
       </section>
 
-      <!-- [图-02] 全屏沉浸场景 | 导航「方案」| 文件: public/images/solution-bg.jpg -->
-      <section class="immersive" id="solution" data-scrollspy="solution" aria-labelledby="immersive-title">
-        <div class="immersive__media">
-          <!-- 源: solution-bg.jpg（双机后厨 · CHAO餐厅）→ public/images/solution-bg.jpg -->
-          <img
-            class="site-media site-media--fullscreen"
-            src="/images/solution-bg.jpg"
-            alt="XR1 双机后厨协同 · CHAO餐厅"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <div class="immersive__content reveal">
-          <h2 class="immersive__title" id="immersive-title">规划驱动执行</h2>
-          <p class="immersive__body">
-            XR1 默认接入 DCS 调度：订单拆解、工位分工与动线工序在规划层可见，再驱动物理取料、递盘与容器周转。忙时支持冲突重规划。
-          </p>
+      <!-- [图-02] 三产品横排 · Figure 对标 | panel-morpho / panel-xr1 / panel-lumen -->
+      <section class="product-triptych" id="products" data-scrollspy="products" aria-labelledby="products-title">
+        <h2 id="products-title" class="visually-hidden">三条产品线</h2>
+        <div class="product-triptych__grid reveal">
+          <article class="product-triptych__panel">
+            <img class="product-triptych__media" src="/images/panel-morpho.jpg" alt="Morpho 智能耳机" loading="lazy" decoding="async" />
+            <div class="product-triptych__overlay" aria-hidden="true"></div>
+            <div class="product-triptych__caption">
+              <p class="product-triptych__kicker">Audio</p>
+              <h3 class="product-triptych__name">Morpho</h3>
+              <p class="product-triptych__desc">移动声学与端侧降噪，连接专注、通勤与沉浸内容。</p>
+              <a href="#contact" class="product-triptych__link">了解 Morpho</a>
+            </div>
+          </article>
+          <article class="product-triptych__panel product-triptych__panel--featured">
+            <img class="product-triptych__media" src="/images/panel-xr1.jpg" alt="XR1 后厨机器人" loading="lazy" decoding="async" />
+            <div class="product-triptych__overlay" aria-hidden="true"></div>
+            <div class="product-triptych__caption">
+              <p class="product-triptych__kicker">Robot</p>
+              <h3 class="product-triptych__name">XR1</h3>
+              <p class="product-triptych__desc">双臂移动执行，集成感知底盘与边缘算力，服务真实空间。</p>
+              <a href="#specs" class="product-triptych__link">查看 XR1 参数</a>
+            </div>
+          </article>
+          <article class="product-triptych__panel product-triptych__panel--lumen">
+            <img class="product-triptych__media" src="/images/panel-lumen.jpg?v=2" alt="Lumen 智能台灯" loading="lazy" decoding="async" />
+            <div class="product-triptych__overlay" aria-hidden="true"></div>
+            <div class="product-triptych__caption">
+              <p class="product-triptych__kicker">Light</p>
+              <h3 class="product-triptych__name">Lumen</h3>
+              <p class="product-triptych__desc">自适应桌面光环境，低眩光照明与场景联动。</p>
+              <a href="#contact" class="product-triptych__link">了解 Lumen</a>
+            </div>
+          </article>
         </div>
       </section>
 
       <!-- [图-04~07] 技术轮播四张 | 导航「技术」| 文件: tech-dof.mp4 / tech-560.jpg / tech-gripper.mp4 / tech-sensors.png -->
       <section class="carousel-section" id="tech" data-scrollspy="tech" aria-labelledby="carousel-title">
         <div class="carousel-section__header reveal">
-          <h2 class="carousel-section__title" id="carousel-title">核心硬件</h2>
-          <p class="carousel-section__desc">双臂、夹爪与感知系统。</p>
+          <h2 class="carousel-section__title" id="carousel-title">XR1 Robot</h2>
+          <p class="carousel-section__desc">感知、运动控制、边缘计算与低延迟连接。</p>
         </div>
         <div class="carousel reveal" data-carousel>
           <article class="carousel__item">
-            <!-- [图-04] 源: 素材/17772587791866454_20260512_102531_Seedance_2.0.mp4 → public/video/tech-dof.mp4 -->
-            <video
-              class="site-media site-media--card"
-              src="/video/tech-dof.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="XR1 整机自由度"
-            ></video>
-            <span class="carousel__label">19 DOF · 整机自由度</span>
+            <video class="site-media site-media--card" src="/video/tech-dof.mp4" autoplay muted loop playsinline preload="metadata" aria-label="XR1 整机自由度"></video>
+            <span class="carousel__label">机器人运动控制</span>
           </article>
           <article class="carousel__item">
-            <!-- [图-05] 源: 素材/封面_后厨俯拍导航路径.jpg → public/images/tech-560.jpg -->
-            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="XR1 后厨俯拍导航路径" loading="lazy" />
-            <span class="carousel__label">窄通道通行</span>
+            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="空间导航路径" loading="lazy" />
+            <span class="carousel__label">空间感知与导航</span>
           </article>
           <article class="carousel__item">
-            <!-- [图-06] 源: 视频/17772587791866454_20260515_001356_Kling_3.0.mp4 → public/video/tech-gripper.mp4 -->
-            <video
-              class="site-media site-media--card"
-              src="/video/tech-gripper.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="metadata"
-              aria-label="150N 自锁夹爪 0.15s 开合"
-            ></video>
-            <span class="carousel__label">0.15s 开合</span>
+            <video class="site-media site-media--card" src="/video/tech-gripper.mp4" autoplay muted loop playsinline preload="metadata" aria-label="机器人末端执行器"></video>
+            <span class="carousel__label">精密执行器</span>
           </article>
           <article class="carousel__item">
-            <!-- [图-07] 源: 素材/5GWiFi_商场双网全息信号.png -->
-            <img class="site-media site-media--card site-media--card-sensors" src="/images/tech-sensors.png" alt="5G 与多维感知" loading="lazy" />
-            <span class="carousel__label">ZED · 激光 · 超声</span>
+            <img class="site-media site-media--card site-media--card-sensors" src="/images/tech-sensors.png" alt="低延迟连接与多维感知" loading="lazy" />
+            <span class="carousel__label">端侧智能连接</span>
           </article>
         </div>
         <div class="carousel__dots" data-carousel-dots aria-hidden="true">
@@ -158,9 +171,9 @@
               <span>边缘算力</span>
               <time datetime="2026">2026</time>
             </div>
-            <h2 class="story__title">后厨认知中枢</h2>
+            <h2 class="story__title">空间智能中枢</h2>
             <p class="story__body">
-              1150 Tops 边缘算力配合 RK3576，本地运行多模态决策；5G / Wi-Fi 5 双网保障调度指令低延迟下发。
+              端侧算力、低延迟网络与多模态感知共同支撑 XR1 的移动执行，也为 Lumen 与 Morpho 的环境理解和个性化交互提供技术复用。
             </p>
             <div class="story__actions">
               <a href="#specs" class="btn-ghost">查看参数</a>
@@ -184,9 +197,9 @@
                 <span>安全感知</span>
                 <time datetime="2026">2026</time>
               </div>
-              <h2 class="story__title">360° 毫米级环境理解</h2>
+              <h2 class="story__title">从场景里理解人、物与任务</h2>
               <p class="story__body">
-                视觉、双激光雷达与超声波融合，狭窄后厨中平滑避障；0.6m/s 下制动距离 ≤0.3m，保障人员与设备安全。
+                量化派产品以真实空间为设计边界：机器人需要避障和执行，台灯需要理解桌面光线，耳机需要识别通话、移动与专注状态。
               </p>
               <div class="story__actions">
                 <a href="#specs" class="btn-ghost">技术参数</a>
@@ -197,43 +210,43 @@
       </section>
 
       <!-- [图-10 已移除] 产线区视频 — 见 docs/图片替换指南.md 若需恢复 -->
-      <section class="section-centered" id="factory" data-scrollspy="factory">
+      <section class="section-centered" id="factory" data-scrollspy="stories">
         <div class="reveal">
-          <h2 class="section-centered__title">降本增效，可量化</h2>
+          <h2 class="section-centered__title">面向商业落地，也面向日常使用</h2>
           <p class="section-centered__subtitle">
-            导入 XR1 整体方案后，单店人工成本可节省 62%–76%，ROI 周期具备竞争力。
+            XR1 从服务空间切入，Lumen 与 Morpho 延伸到桌面和个人声学。三类硬件共享感知、算法和供应链能力。
           </p>
-          <a href="#contact" class="btn-primary">获取测算报告</a>
+          <a href="#contact" class="btn-primary">联系量化派</a>
         </div>
         <div class="testimonial-grid reveal">
           <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">「规划层能看见每一单工序，执行层不再靠人盯。」</p>
+            <p class="testimonial-card__quote">XR1 承担移动、抓取与周转，把服务流程中的重复动作交给机器人。</p>
             <footer class="testimonial-card__author">
-              <strong>团餐运营负责人</strong>
-              <span>场景调研</span>
+              <strong>XR1</strong>
+              <span>服务机器人</span>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">「双臂周转容器，和自动炒锅流水线真正接上了。」</p>
+            <p class="testimonial-card__quote">Lumen 以桌面传感和光学控制为核心，让工作、学习与阅读照明更稳定。</p>
             <footer class="testimonial-card__author">
-              <strong>连锁餐饮 CTO</strong>
-              <span>客户反馈</span>
+              <strong>Lumen</strong>
+              <span>智能台灯</span>
             </footer>
           </blockquote>
           <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">「窄机身进得了我们后厨过道，部署比预期快。」</p>
+            <p class="testimonial-card__quote">Morpho 面向移动声学和端侧降噪，连接专注、通勤与沉浸内容。</p>
             <footer class="testimonial-card__author">
-              <strong>食堂项目经理</strong>
-              <span>试点总结</span>
+              <strong>Morpho</strong>
+              <span>智能耳机</span>
             </footer>
           </blockquote>
         </div>
       </section>
 
       <!-- [视频-11] 落地场景实拍 | public/video/scenario-promo.mp4 ← 实拍/调色后宣传片素材-1.mp4 -->
-      <section class="factory-block" data-scrollspy="factory">
+      <section class="factory-block" data-scrollspy="stories">
         <div class="reveal">
-          <h2 class="section-centered__title">落地场景</h2>
+          <h2 class="section-centered__title">XR1 落地场景</h2>
           <p class="section-centered__subtitle factory-block__subtitle">
             企业团餐 · 学校食堂 · 医院食堂 · 连锁中餐厅，封闭打餐与出餐流水线。
           </p>
@@ -294,15 +307,51 @@
         </div>
       </section>
 
+      <!-- 关于量化派 · 我们是谁 + 使命愿景（对标智元 about 结构） -->
+      <section class="about-stack" id="about" data-scrollspy="about" aria-labelledby="about-who-title">
+        <article class="about-panel about-panel--who reveal">
+          <p class="about-panel__rail" aria-hidden="true">WHO WE ARE</p>
+          <div class="about-panel__inner">
+            <h2 class="about-panel__title" id="about-who-title">我们是谁</h2>
+            <div class="about-panel__copy">
+              <p>
+                量化派（Quant Group）是一家面向真实空间的智能硬件公司。我们把顶会里验证过的感知、运动控制与端侧智能，做成可量产、可部署、可长期运行的产品，而不是停留在演示里的概念。
+              </p>
+              <p>
+                围绕<strong>移动执行、环境光感、个人声学</strong>三条能力线，我们构建了 XR1 机器人、Lumen 智能台灯与 Morpho 智能耳机。它们分别进入服务空间、桌面场景与个人移动声学，用同一套工程底座，回应真实世界里不同尺度的问题。
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="about-panel about-panel--vision reveal">
+          <p class="about-panel__rail" aria-hidden="true">MISSION &amp; VISION</p>
+          <div class="about-panel__inner">
+            <h2 class="about-panel__title" id="about-vision-title">使命愿景</h2>
+            <div class="about-panel__copy about-panel__copy--vision">
+              <div class="about-vision-item">
+                <p class="about-vision-item__label">使命</p>
+                <p class="about-vision-item__text">把顶会技术落地到所有人身边。</p>
+              </div>
+              <div class="about-vision-item">
+                <p class="about-vision-item__label">愿景</p>
+                <p class="about-vision-item__text">
+                  让智能走出屏幕，进入服务空间、桌面与个人移动场景；以可靠、可复制的硬件产品，持续提升真实世界的效率、安全与体验。
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
       <!-- [图-13 可选] 微信二维码 public/images/wechat-qr.png | 导航「商务洽谈」 -->
       <section class="experience" id="contact" data-scrollspy="contact" aria-labelledby="experience-title">
-        <h2 class="experience__title" id="experience-title">获取方案资料</h2>
-        <p class="experience__lead">留下工作邮箱，我们会发送 XR1 产品手册与 ROI 测算模板。</p>
+        <h2 class="experience__title" id="experience-title">联系量化派</h2>
+        <p class="experience__lead">留下工作邮箱，获取 XR1、Lumen、Morpho 的产品资料与合作信息。</p>
         <form class="notify-form" action="#" method="post" onsubmit="return false">
           <input type="email" name="email" placeholder="工作邮箱" aria-label="工作邮箱" required />
-          <button type="submit" class="btn-primary">获取方案资料</button>
+          <button type="submit" class="btn-primary">获取产品资料</button>
         </form>
-        <p class="experience__fine">订阅产品更新。可随时取消。商务请联系 business@xr1.robot</p>
+        <p class="experience__fine">订阅产品更新。可随时取消。商务请联系 business@quantpai.com</p>
       </section>
     </main>
 
@@ -310,14 +359,15 @@
     <footer class="footer-1x">
       <div class="footer-1x__grid">
         <div>
-          <div class="footer-1x__brand">XR1</div>
-          <p class="footer-1x__copy">XR1 © 2026 · 后厨履约机器人</p>
+          <div class="footer-1x__brand">量化派</div>
+          <p class="footer-1x__copy">QuantPai © 2026 · 智能硬件公司</p>
         </div>
         <ul class="footer-1x__col">
-          <li><a href="#product">产品</a></li>
-          <li><a href="#solution">方案</a></li>
+          <li><a href="#product">品牌</a></li>
+          <li><a href="#products">产品</a></li>
           <li><a href="#tech">技术</a></li>
           <li><a href="#specs">参数</a></li>
+          <li><a href="#about">关于</a></li>
           <li><a href="#contact">商务</a></li>
         </ul>
         <ul class="footer-1x__col">

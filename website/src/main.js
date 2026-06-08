@@ -134,18 +134,17 @@ function initCarouselDots() {
   const items = carousel.querySelectorAll('.carousel__item');
 
   function syncCarouselState() {
-    const center = carousel.scrollLeft + carousel.clientWidth / 2;
+    const edge = carousel.scrollLeft + 8;
     let active = 0;
     items.forEach((item, i) => {
-      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
-      if (Math.abs(itemCenter - center) < item.offsetWidth / 2) active = i;
+      if (item.offsetLeft <= edge) active = i;
     });
     dots.forEach((d, i) => d.classList.toggle('is-active', i === active));
   }
 
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
-      items[i]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      items[i]?.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
     });
   });
 

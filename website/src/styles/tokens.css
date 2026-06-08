@@ -9,6 +9,7 @@
   --color-btn-text: #fafbfc;
   --color-pill-bg: rgba(24, 27, 31, 0.05);
   --color-overlay: rgba(12, 14, 18, 0.48);
+  --color-xr1: #0068e0;
 
   /* 首屏深色 */
   --color-hero-bg: #0c0e12;
@@ -19,7 +20,7 @@
 
   --font-sans: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', system-ui, sans-serif;
 
-  --nav-height: 56px;
+  --nav-height: 88px;
   --container: min(1280px, calc(100% - 3rem));
   --radius-media: 1.25rem;
   --radius-pill: 999px;
