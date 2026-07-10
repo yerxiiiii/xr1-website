@@ -158,7 +158,6 @@
   font-weight: 800;
 }
 
-.editorial-grid,
 .system-grid,
 .roadmap-grid,
 .mode-grid {
@@ -166,13 +165,6 @@
   gap: 22px;
 }
 
-.editorial-grid {
-  grid-template-columns: 1.18fr 0.82fr 0.82fr;
-  margin-top: 52px;
-  align-items: start;
-}
-
-.editorial-card,
 .info-card,
 .zone-item,
 .cta-panel,
@@ -181,50 +173,6 @@
   border-radius: var(--radius-md);
 }
 
-.editorial-card {
-  overflow: hidden;
-  background: rgba(255, 253, 248, 0.82);
-  border: 1px solid rgba(22, 20, 18, 0.07);
-  box-shadow: var(--shadow-card);
-}
-
-.editorial-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: #e8dfd3;
-}
-
-.editorial-card__media {
-  display: flex;
-  justify-content: center;
-  padding: 20px 20px 0;
-}
-
-.editorial-card__media--balanced {
-  aspect-ratio: 0.76 / 1;
-}
-
-.editorial-card__media--balanced img {
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  min-height: 0;
-  border-radius: 24px;
-  object-fit: contain;
-  object-position: center;
-}
-
-.editorial-card__img--right {
-  transform: scale(0.86);
-  transform-origin: center center;
-}
-
-.editorial-card__body {
-  padding: 26px;
-}
-
-.editorial-card__kicker,
 .info-card__tag,
 .mode-card__badge {
   display: inline-flex;
@@ -236,7 +184,6 @@
   text-transform: uppercase;
 }
 
-.editorial-card h3,
 .info-card h3,
 .zone-item h3,
 .mode-card h3 {
@@ -248,7 +195,6 @@
   font-weight: 800;
 }
 
-.editorial-card p,
 .info-card p,
 .zone-item p,
 .mode-card p,
@@ -261,32 +207,6 @@
   color: var(--color-text-soft);
   font-size: 16px;
   line-height: 1.7;
-}
-
-.editorial-card__quote {
-  height: 100%;
-  min-height: 320px;
-  padding: 26px;
-  display: grid;
-  align-content: space-between;
-  background:
-    radial-gradient(circle at top left, rgba(255, 106, 61, 0.16), transparent 38%),
-    linear-gradient(180deg, #161412 0%, #231f1a 100%);
-}
-
-.editorial-card__quote span {
-  color: rgba(255, 251, 244, 0.54);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.editorial-card__quote p {
-  color: var(--color-white);
-  font-family: var(--font-display);
-  font-size: clamp(32px, 3vw, 48px);
-  line-height: 1.04;
 }
 
 .story-stack {
@@ -461,7 +381,6 @@
 @media (max-width: 1100px) {
   .hero__inner,
   .manifesto,
-  .editorial-grid,
   .split-feature,
   .system-grid,
   .mode-grid,
@@ -507,7 +426,6 @@
     grid-template-columns: 1fr;
   }
 
-  .editorial-card__body,
   .info-card,
   .zone-item,
   .mode-card,
