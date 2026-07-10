@@ -5,401 +5,293 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="量化派官网 — 面向真实空间的智能硬件产品，包括机器人 XR1、台灯 Lumen 与耳机 Morpho。"
+      content="仓仓：一个活在桌面屏幕里的全息小生命。不用签到、不用喂养，在你专注工作时，它替你好好生活。"
     />
-    <title>量化派 | QuantGroup</title>
+    <title>仓仓 | 活在桌面里的小生命</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/styles/tokens.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <link rel="stylesheet" href="/src/styles/sections.css" />
   </head>
   <body>
-    <header class="nav" role="banner">
-      <div class="nav__inner">
-        <a href="#product" class="nav__logo" aria-label="量化派首页">
-          <img
-            class="nav__logo-img"
-            src="/images/quantpai-logo.png?v=4"
-            alt="量化派 Quant Group"
-            width="158"
-            height="80"
-            decoding="async"
-          />
-        </a>
-        <nav aria-label="页面导航">
-          <ul class="nav__links">
-            <li><a href="#product" data-nav="product">首页</a></li>
-            <li><a href="#specs" data-nav="specs">XR1<span class="nav__chevron" aria-hidden="true"></span></a></li>
-            <li><a href="#products" data-nav="products">Lumen<span class="nav__chevron" aria-hidden="true"></span></a></li>
-            <li><a href="#products" data-nav="products">Morpho<span class="nav__chevron" aria-hidden="true"></span></a></li>
-            <li><a href="#tech" data-nav="tech">技术<span class="nav__chevron" aria-hidden="true"></span></a></li>
-            <li><a href="#stories" data-nav="stories">场景<span class="nav__chevron" aria-hidden="true"></span></a></li>
-            <li><a href="#contact">文档</a></li>
-            <li><a href="#about" data-nav="about">关于量化派<span class="nav__chevron" aria-hidden="true"></span></a></li>
-          </ul>
-        </nav>
-        <div class="nav__actions">
-          <a href="#" class="nav__lang" aria-label="切换语言">中/EN</a>
-          <button type="button" class="nav__search" aria-label="搜索"></button>
-          <a href="#contact" class="nav__order" data-nav="contact">
-            <span class="nav__order-icon" aria-hidden="true"></span>
-            联系我们
+    <div class="site-shell">
+      <header class="nav" role="banner">
+        <div class="nav__inner">
+          <a href="#top" class="nav__brand" aria-label="仓仓官网首页">
+            <span class="nav__brand-mark">仓仓</span>
           </a>
-          <button type="button" class="nav__menu-btn" aria-label="菜单" aria-expanded="false">
-            <span></span>
-            <span></span>
-          </button>
+          <nav class="nav__menu" aria-label="页面导航">
+            <a href="#story" data-nav>故事</a>
+            <a href="#experience" data-nav>体验</a>
+            <a href="#habitat" data-nav>小世界</a>
+            <a href="#modes" data-nav>陪伴</a>
+            <a href="#trust" data-nav>承诺</a>
+          </nav>
+          <a class="nav__cta" href="#contact">预约体验</a>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <!--
-      图片替换总说明 → website/docs/图片替换指南.md
-      素材目录 → website/public/images/
-      本文件每个 [图-xx] 注释对应该换的一处底图/配图
-    -->
-    <main>
-      <!-- [图-01] 首屏主视觉 | 视频: public/video/hero.mp4 | 左右+底部渐隐见 .hero-1x__video -->
-      <section class="hero-1x" id="product" data-scrollspy="product" aria-labelledby="hero-label">
-        <div class="hero-1x__label reveal" id="hero-label">
-          <span class="hero-1x__name">New Era</span>
-          <span class="hero-1x__subtitle">把顶会技术落地到所有人身边</span>
-        </div>
-        <div class="hero-1x__visual reveal">
-          <!-- 源: 视频/17772587791866454_20260514_222445_Seedance_2.0.mp4 | 文件: public/video/hero.mp4 -->
-          <video
-            class="hero-1x__video"
-            src="/video/hero.mp4"
-            poster="/images/hero.jpg"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            aria-label="量化派智能硬件产品场景"
-          ></video>
-        </div>
-        <div class="hero-1x__cta-block reveal">
-          <span class="hero-1x__deposit">机器人、光与声音的下一代空间入口</span>
-          <a href="#products" class="btn-primary">查看产品</a>
-        </div>
-      </section>
+      <main id="top">
+        <section class="hero">
+          <div class="hero__inner section">
+            <div class="hero__copy">
+              <p class="hero__issue reveal">桌面全息陪伴</p>
+              <div class="hero__headline reveal">
+                <p class="eyebrow eyebrow--dark">活在屏幕里的小生命</p>
+                <h1>你被困在工作里，<br />它还在替你生活。</h1>
+              </div>
+              <div class="hero__deck reveal">
+                <p class="hero__lede">
+                  仓仓是放在桌面上的全息小生命窗口。不用签到，不用喂养，不用打开手机。抬头时，它会自己吃饭、休息、跑轮、发呆——像一扇小窗，里面有人替你好好过着日子。
+                </p>
+                <div class="hero__actions">
+                  <a class="button button--primary" href="#contact">预约体验</a>
+                  <a class="button button--ghost" href="#story">了解更多</a>
+                </div>
+              </div>
+              <div class="hero__ticker reveal" aria-label="产品核心信息">
+                <span>桌面常驻 / 不依赖手机</span>
+                <span>自主生活 / 无需打卡</span>
+                <span>低打扰 / 情绪缓冲</span>
+              </div>
+            </div>
 
-      <!-- [图-02] 三产品横排 · Figure 对标 | panel-morpho / panel-xr1 / panel-lumen -->
-      <section class="product-triptych" id="products" data-scrollspy="products" aria-labelledby="products-title">
-        <h2 id="products-title" class="visually-hidden">三条产品线</h2>
-        <div class="product-triptych__grid reveal">
-          <article class="product-triptych__panel">
-            <img class="product-triptych__media" src="/images/panel-morpho.jpg" alt="Morpho 智能耳机" loading="lazy" decoding="async" />
-            <div class="product-triptych__overlay" aria-hidden="true"></div>
-            <div class="product-triptych__caption">
-              <p class="product-triptych__kicker">Audio</p>
-              <h3 class="product-triptych__name">Morpho</h3>
-              <p class="product-triptych__desc">移动声学与端侧降噪，连接专注、通勤与沉浸内容。</p>
-              <a href="#contact" class="product-triptych__link">了解 Morpho</a>
-            </div>
-          </article>
-          <article class="product-triptych__panel product-triptych__panel--featured">
-            <img class="product-triptych__media" src="/images/panel-xr1.jpg" alt="XR1 后厨机器人" loading="lazy" decoding="async" />
-            <div class="product-triptych__overlay" aria-hidden="true"></div>
-            <div class="product-triptych__caption">
-              <p class="product-triptych__kicker">Robot</p>
-              <h3 class="product-triptych__name">XR1</h3>
-              <p class="product-triptych__desc">双臂移动执行，集成感知底盘与边缘算力，服务真实空间。</p>
-              <a href="#specs" class="product-triptych__link">查看 XR1 参数</a>
-            </div>
-          </article>
-          <article class="product-triptych__panel product-triptych__panel--lumen">
-            <img class="product-triptych__media" src="/images/panel-lumen.jpg?v=2" alt="Lumen 智能台灯" loading="lazy" decoding="async" />
-            <div class="product-triptych__overlay" aria-hidden="true"></div>
-            <div class="product-triptych__caption">
-              <p class="product-triptych__kicker">Light</p>
-              <h3 class="product-triptych__name">Lumen</h3>
-              <p class="product-triptych__desc">自适应桌面光环境，低眩光照明与场景联动。</p>
-              <a href="#contact" class="product-triptych__link">了解 Lumen</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- [图-04~07] 技术轮播四张 | 导航「技术」| 文件: tech-dof.mp4 / tech-560.jpg / tech-gripper.mp4 / tech-sensors.png -->
-      <section class="carousel-section" id="tech" data-scrollspy="tech" aria-labelledby="carousel-title">
-        <div class="carousel-section__header reveal">
-          <h2 class="carousel-section__title" id="carousel-title">XR1 Robot</h2>
-          <p class="carousel-section__desc">感知、运动控制、边缘计算与低延迟连接。</p>
-        </div>
-        <div class="carousel reveal" data-carousel>
-          <article class="carousel__item">
-            <video class="site-media site-media--card" src="/video/tech-dof.mp4" autoplay muted loop playsinline preload="metadata" aria-label="XR1 整机自由度"></video>
-            <span class="carousel__label">机器人运动控制</span>
-          </article>
-          <article class="carousel__item">
-            <img class="site-media site-media--card" src="/images/tech-560.jpg" alt="空间导航路径" loading="lazy" />
-            <span class="carousel__label">空间感知与导航</span>
-          </article>
-          <article class="carousel__item">
-            <video class="site-media site-media--card" src="/video/tech-gripper.mp4" autoplay muted loop playsinline preload="metadata" aria-label="机器人末端执行器"></video>
-            <span class="carousel__label">精密执行器</span>
-          </article>
-          <article class="carousel__item">
-            <img class="site-media site-media--card site-media--card-sensors" src="/images/tech-sensors.png" alt="低延迟连接与多维感知" loading="lazy" />
-            <span class="carousel__label">端侧智能连接</span>
-          </article>
-        </div>
-        <div class="carousel__dots" data-carousel-dots aria-hidden="true">
-          <button type="button" class="carousel__dot is-active" aria-label="第 1 张"></button>
-          <button type="button" class="carousel__dot" aria-label="第 2 张"></button>
-          <button type="button" class="carousel__dot" aria-label="第 3 张"></button>
-          <button type="button" class="carousel__dot" aria-label="第 4 张"></button>
-        </div>
-      </section>
-
-      <!-- [图-08] 案例 · 算力 | 导航「案例」| public/images/story-tops.png ← 素材/1150Tops_机房数据流半身.png -->
-      <section class="story story--bg" id="stories" data-scrollspy="stories">
-        <div class="story-bg__media">
-          <!-- 源: 素材/1150Tops_机房数据流半身.png -->
-          <img
-            class="site-media site-media--story-bg"
-            src="/images/story-tops.png"
-            alt="XR1 1150 Tops 边缘算力"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-        <div class="story-bg__content reveal">
-          <div class="story-bg__inner">
-            <div class="story__badge">
-              <span>边缘算力</span>
-              <time datetime="2026">2026</time>
-            </div>
-            <h2 class="story__title">空间智能中枢</h2>
-            <p class="story__body">
-              端侧算力、低延迟网络与多模态感知共同支撑 XR1 的移动执行，也为 Lumen 与 Morpho 的环境理解和个性化交互提供技术复用。
-            </p>
-            <div class="story__actions">
-              <a href="#specs" class="btn-ghost">查看参数</a>
-              <a href="#contact" class="btn-primary">商务洽谈</a>
+            <div class="hero__visual reveal" aria-label="仓仓主视觉">
+              <div class="device-frame">
+                <video
+                  class="device-frame__media"
+                  src="/cangcang/hero.mp4"
+                  poster="/cangcang/hero.png"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                ></video>
+              </div>
+              <p class="hero__caption">仓仓 · 桌面全息小生命</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- [图-09] 案例左图 · 感知 | public/images/story-sensors.jpg ← 素材/底盘感知.jpeg -->
-      <section class="story" data-scrollspy="stories">
-        <div class="container">
-          <div class="story__grid reveal">
-            <div class="story__media-wrap">
-              <!-- 源: 素材/底盘感知.jpeg -->
-              <img class="site-media site-media--story" src="/images/story-sensors.jpg" alt="XR1 底盘感知系统" loading="lazy" />
-              
+        <section class="section section--light" id="story">
+          <div class="manifesto">
+            <div class="manifesto__lead reveal">
+              <p class="eyebrow">为什么需要仓仓</p>
+              <p>
+                高压办公、长期备考、重复的日常——你被困在屏幕和任务里，但桌面上的小生命仍然在替你休息、活动、探索和生活。它不会催你，不会弹通知，只是安静地存在着。
+              </p>
+            </div>
+            <div class="manifesto__headline reveal">
+              <h2>你不需要照顾它。<br />只需要偶尔看看它。</h2>
+            </div>
+            <div class="manifesto__notes reveal">
+              <p>
+                情绪价值不来自数值面板或每日任务，而来自那些停顿、转身和没有被你控制的瞬间。看到它停下来发呆，往往比收到一条提醒更让人松一口气。
+              </p>
+            </div>
+          </div>
+
+          <div class="editorial-grid">
+            <article class="editorial-card editorial-card--feature reveal">
+              <img src="/cangcang/hero.png" alt="仓仓产品主视图" />
+              <div class="editorial-card__body">
+                <p class="editorial-card__kicker">桌面美学</p>
+                <h3>第一眼是精致的桌面物件，第二眼才发现里面住着一只会生活的小生命。</h3>
+                <p>它值得长期摆在工位或书桌上，成为工作环境的一部分，而不只是用完就收的玩具。</p>
+              </div>
+            </article>
+            <article class="editorial-card reveal">
+              <div class="editorial-card__quote">
+                <span>安静的陪伴</span>
+                <p>它不解释自己在做什么，但你能看懂。动作、姿态和节奏，就是最好的表达。</p>
+              </div>
+            </article>
+            <article class="editorial-card reveal">
+              <img src="/cangcang/detail-3.png" alt="仓仓进食场景" />
+              <div class="editorial-card__body">
+                <p class="editorial-card__kicker">替你生活</p>
+                <h3>你开会的时候，它在吃饭；你写方案的时候，它在跑轮。</h3>
+                <p>像《旅行青蛙》那样——你忙你的，它过它的，偶尔抬头对视一下，就够了。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--dark" id="experience">
+          <div class="story-stack">
+            <div class="story-row reveal">
+              <div class="story-row__meta">
+                <p class="eyebrow eyebrow--dark">日常节奏</p>
+                <span>01</span>
+              </div>
+              <div class="story-row__content">
+                <h2>它有自己过日子的时间表。</h2>
+                <p>饿了会去吃饭，累了会回窝睡觉，无聊了会跑轮，好奇了会在小世界里探索。每次抬头，都像看见一个正在生活的小生命，而不是循环播放的动画。</p>
+              </div>
+            </div>
+
+            <div class="story-row reveal">
+              <div class="story-row__meta">
+                <p class="eyebrow eyebrow--dark">真实存在感</p>
+                <span>02</span>
+              </div>
+              <div class="story-row__content">
+                <h2>饭后会整理，受惊后会躲起来，安静时也会独自发呆。</h2>
+                <p>它有自己的惯性和节奏，不会每隔几秒就切换动作。那些停顿和转身，才是让人觉得「它真的在活着」的时刻。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="system-grid">
+            <article class="info-card info-card--dark reveal">
+              <span class="info-card__tag">01</span>
+              <h3>会自己安排时间</h3>
+              <p>你忙的时候，它也在过自己的日常，不需要你持续看护。</p>
+            </article>
+            <article class="info-card info-card--dark reveal">
+              <span class="info-card__tag">02</span>
+              <h3>会表达状态</h3>
+              <p>困了会回窝，饿了会找食物，无聊时会去跑轮——情绪和状态一眼可见。</p>
+            </article>
+            <article class="info-card info-card--dark reveal">
+              <span class="info-card__tag">03</span>
+              <h3>会留下停顿</h3>
+              <p>不是一串连续动画，而是有发呆、有转身、有安静片刻的真实存在感。</p>
+            </article>
+            <article class="info-card info-card--dark reveal">
+              <span class="info-card__tag">04</span>
+              <h3>会安静陪着你</h3>
+              <p>价值不是提醒和催促，而是在你专注时，仍旧安静地活在桌面一角。</p>
+            </article>
+          </div>
+
+        </section>
+
+        <section class="section section--light" id="habitat">
+          <div class="split-feature split-feature--editorial">
+            <div class="split-feature__media reveal">
+              <img src="/cangcang/detail-1.png" alt="仓仓全息生态舱" />
+            </div>
+            <div class="split-feature__copy reveal">
+              <p class="eyebrow">它的小世界</p>
+              <h2>一个清晰的小生态舱，足够容纳它的整个生活。</h2>
+              <p>
+                窝、吃饭区、跑轮、自由区——四个一眼能看懂的地方，让它的休息、进食、运动和探索都有归属。你不需要学习复杂操作，看位置就知道它现在在干什么。
+              </p>
+              <div class="zone-list">
+                <article class="zone-item">
+                  <h3>窝</h3>
+                  <p>睡觉、休息、躲起来恢复。</p>
+                </article>
+                <article class="zone-item">
+                  <h3>吃饭区</h3>
+                  <p>补充能量，享受一顿安静的饭。</p>
+                </article>
+                <article class="zone-item">
+                  <h3>跑轮</h3>
+                  <p>释放精力，跑一会儿歇一会儿。</p>
+                </article>
+                <article class="zone-item">
+                  <h3>自由区</h3>
+                  <p>探索、游荡、短暂停留。</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--dark" id="modes">
+          <div class="modes-head reveal">
+            <p class="eyebrow eyebrow--dark">怎么陪伴</p>
+            <h2>你只需要偶尔打扰它，不需要经营它。</h2>
+            <p>轻触底座、回到桌面、切换模式——都是很短的回应。你不会被打断，也不需要为了照顾它而开启一套任务流。</p>
+          </div>
+
+          <div class="mode-grid">
+            <article class="mode-card reveal">
+              <span class="mode-card__badge">陪伴</span>
+              <h3>回到桌面，它也在</h3>
+              <p>当你落座，仓仓从安静状态恢复，继续它自己的生活节奏。像有人一直在那儿等你。</p>
+            </article>
+            <article class="mode-card reveal">
+              <span class="mode-card__badge">轻触</span>
+              <h3>轻触底座，短暂对视</h3>
+              <p>唤起一个短暂的回应——看看它现在是困了、饿了，还是只是想发呆。</p>
+            </article>
+            <article class="mode-card reveal">
+              <span class="mode-card__badge">切换</span>
+              <h3>三种模式，适配不同场景</h3>
+              <p>陪伴、安静、展示——工位专注、深夜学习、或给朋友看看，都能切换。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--light" id="trust">
+          <div class="roadmap-head reveal">
+            <p class="eyebrow">我们的承诺</p>
+            <h2>不做手游式养成，不做道德绑架。</h2>
+            <p>仓仓的核心体验不依赖手机 App，不要求你每天打开。没有饥饿死亡、没有掉级惩罚、没有签到焦虑——它只是一直在桌面上，替你好好生活。</p>
+          </div>
+
+          <div class="roadmap-grid">
+            <article class="info-card reveal">
+              <span class="info-card__tag">隐私</span>
+              <h3>没有摄像头</h3>
+              <p>不上传你的桌面画面，不采集敏感数据。它只看得到自己的小世界。</p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-card__tag">自由</span>
+              <h3>没有每日任务</h3>
+              <p>不签到、不喂养、不刷内容。你想看就看，不想看它就自己过。</p>
+            </article>
+            <article class="info-card reveal">
+              <span class="info-card__tag">未来</span>
+              <h3>更多角色与主题空间</h3>
+              <p>小猫、小兔、海边、森林——世界会慢慢长大，但陪伴的本质不会变。</p>
+            </article>
+          </div>
+
+          <div class="spec-strip reveal" aria-label="适合谁">
+            <div>
+              <span>高压办公</span>
+              <strong>情绪出口</strong>
             </div>
             <div>
-              <div class="story__badge">
-                <span>安全感知</span>
-                <time datetime="2026">2026</time>
-              </div>
-              <h2 class="story__title">从场景里理解人、物与任务</h2>
-              <p class="story__body">
-                量化派产品以真实空间为设计边界：机器人需要避障和执行，台灯需要理解桌面光线，耳机需要识别通话、移动与专注状态。
-              </p>
-              <div class="story__actions">
-                <a href="#specs" class="btn-ghost">技术参数</a>
-              </div>
+              <span>学习备考</span>
+              <strong>低打扰陪伴</strong>
+            </div>
+            <div>
+              <span>桌面美学</span>
+              <strong>长期摆放</strong>
+            </div>
+            <div>
+              <span>新硬件爱好者</span>
+              <strong>全息体验</strong>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- [图-10 已移除] 产线区视频 — 见 docs/图片替换指南.md 若需恢复 -->
-      <section class="section-centered" id="factory" data-scrollspy="stories">
-        <div class="reveal">
-          <h2 class="section-centered__title">面向商业落地，也面向日常使用</h2>
-          <p class="section-centered__subtitle">
-            XR1 从服务空间切入，Lumen 与 Morpho 延伸到桌面和个人声学。三类硬件共享感知、算法和供应链能力。
-          </p>
-          <a href="#contact" class="btn-primary">联系量化派</a>
-        </div>
-        <div class="testimonial-grid reveal">
-          <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">XR1 承担移动、抓取与周转，把服务流程中的重复动作交给机器人。</p>
-            <footer class="testimonial-card__author">
-              <strong>XR1</strong>
-              <span>服务机器人</span>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">Lumen 以桌面传感和光学控制为核心，让工作、学习与阅读照明更稳定。</p>
-            <footer class="testimonial-card__author">
-              <strong>Lumen</strong>
-              <span>智能台灯</span>
-            </footer>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p class="testimonial-card__quote">Morpho 面向移动声学和端侧降噪，连接专注、通勤与沉浸内容。</p>
-            <footer class="testimonial-card__author">
-              <strong>Morpho</strong>
-              <span>智能耳机</span>
-            </footer>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- [视频-11] 落地场景实拍 | public/video/scenario-promo.mp4 ← 实拍/调色后宣传片素材-1.mp4 -->
-      <section class="factory-block" data-scrollspy="stories">
-        <div class="reveal">
-          <h2 class="section-centered__title">XR1 落地场景</h2>
-          <p class="section-centered__subtitle factory-block__subtitle">
-            企业团餐 · 学校食堂 · 医院食堂 · 连锁中餐厅，封闭打餐与出餐流水线。
-          </p>
-        </div>
-        <div class="factory-block__diagram reveal">
-          <video
-            class="site-media site-media--diagram"
-            src="/video/scenario-promo.mp4"
-            poster="/images/factory-diagram.jpg"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            aria-label="XR1 团餐后厨落地场景实拍"
-          ></video>
-          
-        </div>
-      </section>
-
-      <!-- 参数区无大图；可选爆炸图 public/images/exploded.jpg — 见 docs/图片替换指南.md 图-12 -->
-      <section class="spec-list-section" id="specs" data-scrollspy="specs" aria-labelledby="specs-heading">
-        <h2 id="specs-heading" class="visually-hidden">技术参数</h2>
-        <div class="spec-list__layout">
-          <ul class="spec-list__sidebar" data-spec-sidebar>
-            <li><a href="#specs" data-spec-nav="all">全部</a></li>
-            <li><a href="#spec-body" data-spec-nav="body">机身</a></li>
-            <li><a href="#spec-arm" data-spec-nav="arm">手臂</a></li>
-            <li><a href="#spec-chassis" data-spec-nav="chassis">底盘</a></li>
-            <li><a href="#spec-network" data-spec-nav="network">网络</a></li>
-          </ul>
-          <div>
-            <p class="spec-group__label" id="spec-body" data-spec-group="body">机身</p>
-            <div class="spec-row">
-              <span class="spec-row__name">整机尺寸</span>
-              <span class="spec-row__value">高 1400mm / 直径 560mm / 净重 90±5kg</span>
+        <section class="section section--dark" id="contact">
+          <div class="cta-panel reveal">
+            <div>
+              <p class="eyebrow eyebrow--dark">预约体验</p>
+              <h2>如果这只桌面小生命值得留下来，就先把入口留给它。</h2>
+              <p>留下联系方式，获取仓仓的最新消息和首批体验机会。</p>
             </div>
-            <p class="spec-group__label" id="spec-arm" data-spec-group="arm">手臂与夹爪</p>
-            <div class="spec-row">
-              <span class="spec-row__name">自由度</span>
-              <span class="spec-row__value">19 DOF · 单臂负载 4.5kg · 臂展 615mm</span>
-            </div>
-            <div class="spec-row">
-              <span class="spec-row__name">夹爪</span>
-              <span class="spec-row__value">150N · 行程 50mm · 0.15s 开合自锁</span>
-            </div>
-            <p class="spec-group__label" id="spec-chassis" data-spec-group="chassis">底盘与续航</p>
-            <div class="spec-row">
-              <span class="spec-row__name">运动性能</span>
-              <span class="spec-row__value">移速 1.2m/s · 爬坡 8° · 续航 8h</span>
-            </div>
-            <p class="spec-group__label" id="spec-network" data-spec-group="network">计算与网络</p>
-            <div class="spec-row">
-              <span class="spec-row__name">算力与连接</span>
-              <span class="spec-row__value">1150 Tops · RK3576 · 5G RedCap / Wi-Fi 5</span>
+            <div class="cta-panel__actions">
+              <a class="button button--primary" href="mailto:hello@cangcang.life">hello@cangcang.life</a>
+              <a class="button button--link button--link-dark" href="#top">返回顶部</a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+    </div>
 
-      <!-- 关于量化派 · 我们是谁 + 使命愿景（对标智元 about 结构） -->
-      <section class="about-stack" id="about" data-scrollspy="about" aria-labelledby="about-who-title">
-        <article class="about-panel about-panel--who reveal">
-          <p class="about-panel__rail" aria-hidden="true">WHO WE ARE</p>
-          <div class="about-panel__inner">
-            <h2 class="about-panel__title" id="about-who-title">我们是谁</h2>
-            <div class="about-panel__copy">
-              <p>
-                量化派（Quant Group）是一家面向真实空间的智能硬件公司。我们把顶会里验证过的感知、运动控制与端侧智能，做成可量产、可部署、可长期运行的产品，而不是停留在演示里的概念。
-              </p>
-              <p>
-                围绕<strong>移动执行、环境光感、个人声学</strong>三条能力线，我们构建了 XR1 机器人、Lumen 智能台灯与 Morpho 智能耳机。它们分别进入服务空间、桌面场景与个人移动声学，用同一套工程底座，回应真实世界里不同尺度的问题。
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="about-panel about-panel--vision reveal">
-          <p class="about-panel__rail" aria-hidden="true">MISSION &amp; VISION</p>
-          <div class="about-panel__inner">
-            <h2 class="about-panel__title" id="about-vision-title">使命愿景</h2>
-            <div class="about-panel__copy about-panel__copy--vision">
-              <div class="about-vision-item">
-                <p class="about-vision-item__label">使命</p>
-                <p class="about-vision-item__text">把顶会技术落地到所有人身边。</p>
-              </div>
-              <div class="about-vision-item">
-                <p class="about-vision-item__label">愿景</p>
-                <p class="about-vision-item__text">
-                  让智能走出屏幕，进入服务空间、桌面与个人移动场景；以可靠、可复制的硬件产品，持续提升真实世界的效率、安全与体验。
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- [图-13 可选] 微信二维码 public/images/wechat-qr.png | 导航「商务洽谈」 -->
-      <section class="experience" id="contact" data-scrollspy="contact" aria-labelledby="experience-title">
-        <h2 class="experience__title" id="experience-title">联系量化派</h2>
-        <p class="experience__lead">留下工作邮箱，获取 XR1、Lumen、Morpho 的产品资料与合作信息。</p>
-        <form class="notify-form" action="#" method="post" onsubmit="return false">
-          <input type="email" name="email" placeholder="工作邮箱" aria-label="工作邮箱" required />
-          <button type="submit" class="btn-primary">获取产品资料</button>
-        </form>
-        <p class="experience__fine">订阅产品更新。可随时取消。商务请联系 business@quantpai.com</p>
-      </section>
-    </main>
-
-    <!-- ui/3.png Footer -->
-    <footer class="footer-1x">
-      <div class="footer-1x__grid">
-        <div>
-          <div class="footer-1x__brand">量化派</div>
-          <p class="footer-1x__copy">QuantPai © 2026 · 智能硬件公司</p>
-        </div>
-        <ul class="footer-1x__col">
-          <li><a href="#product">品牌</a></li>
-          <li><a href="#products">产品</a></li>
-          <li><a href="#tech">技术</a></li>
-          <li><a href="#specs">参数</a></li>
-          <li><a href="#about">关于</a></li>
-          <li><a href="#contact">商务</a></li>
-        </ul>
-        <ul class="footer-1x__col">
-          <li><a href="#">领英</a></li>
-          <li><a href="#">视频号</a></li>
-          <li><a href="#">微信公众号</a></li>
-        </ul>
-        <ul class="footer-1x__col">
-          <li><a href="#">使用条款</a></li>
-          <li><a href="#">隐私政策</a></li>
-          <li><a href="#">媒体联系</a></li>
-          <li><a href="#">支持</a></li>
-        </ul>
-        <ul class="footer-1x__col">
-          <li><a href="#contact">获取更新</a></li>
-          <li><a href="#contact">投资者关系</a></li>
-        </ul>
-      </div>
-    </footer>
-
-    <style>
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-      }
-    </style>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
